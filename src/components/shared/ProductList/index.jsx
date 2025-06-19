@@ -26,28 +26,34 @@ export default function ProductList() {
 
       <div className="album py-5 bg-body-tertiary">
         <div className="container">
-          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
             {books.map((book) => (
               <div key={book.id} className="col">
-                <div className="card shadow-sm">
-                  <img className="img-fluid" src={book.image} alt={book.title} />
-                  <div className="card-body">
+                <div className="card h-100 shadow-sm d-flex flex-column">
+                  <img
+                    src={book.image}
+                    alt={book.title}
+                    className="card-img-top"
+                    style={{ height: "250px", objectFit: "cover" }}
+                  />
+                  <div className="card-body d-flex flex-column">
                     <h5 className="card-title">{book.title}</h5>
-                    <p className="card-text">
+                    <p
+                      className="card-text text-truncate"
+                      style={{ maxHeight: "80px", overflow: "hidden" }}
+                    >
                       {book.description}
                     </p>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <div className="btn-group">
-                        <p>{book.author}</p>
-                      </div>
-                      <small className="text-body-secondary">{book.year}</small>
+                    <div className="mt-auto d-flex justify-content-between align-items-center">
+                      <small className="text-muted">{book.author}</small>
+                      <small className="text-body-secondary">
+                        {book.year}
+                      </small>
                     </div>
                   </div>
                 </div>
               </div>
             ))}
-
           </div>
         </div>
       </div>
