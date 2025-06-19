@@ -4,7 +4,7 @@ import Header from "../../components/shared/Header";
 export default function Team() {
     return (
         <>
-            <Header />
+            
             <section className="py-5 bg-light">
                 <div className="container">
                     <h2 className="text-center mb-4">Our Team</h2>
@@ -45,7 +45,7 @@ export default function Team() {
                     </div>
                 </div>
             </section>
-            <Footer />
+            
         </>
     );
 }

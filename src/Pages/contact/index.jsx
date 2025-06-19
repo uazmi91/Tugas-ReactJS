@@ -4,7 +4,7 @@ import Header from "../../components/shared/Header";
 export default function Contact() {
   return (
     <>
-      <Header />
+      
       <section className="py-5">
         <div className="container">
           <h2 className="text-center mb-4">Contact Us</h2>
@@ -64,7 +64,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
-      <Footer />
+      
     </>
   );
 }
